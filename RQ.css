@@ -1,0 +1,132 @@
+/* General Body Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f7fafa; 
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #585a6e; 
+}
+
+.container {
+    background-color:rgb(51, 51, 77); 
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 100%;
+    max-width: 380px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.container:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.container p {
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 20px;
+    transition: color 0.3s ease;
+}
+
+input {
+    width: 100%;
+    padding: 15px;
+    font-size: 16px;
+    border: 1px solid #444;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    outline: none;
+    background-color: #2d333d; 
+    color: #fff;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus {
+    border-color: #5c6bc0; 
+    box-shadow: 0 0 8px rgba(92, 107, 192, 0.6);
+}
+
+button {
+    background-color: #5c6bc0;
+    color: #fff;
+    padding: 14px 22px;
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-bottom: 20px; 
+}
+
+button:hover {
+    background-color: #3e4a99;
+    transform: translateY(-4px); 
+}
+
+.imgbox {
+    display: none;
+    margin-top: 25px;
+    margin-bottom: 20px;
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    transform: scale(0.9); 
+}
+
+.imgbox.show {
+    display: block;
+    opacity: 1;
+    transform: scale(1); 
+}
+
+.qrbox {
+    width: 180px; 
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); 
+    transition: transform 0.3s ease;
+}
+
+.qrbox:hover {
+    transform: scale(1.05); 
+}
+
+.qrbox {
+    background-image: url('placeholder-image.jpg'); 
+    background-size: cover;
+    background-position: center;
+    object-fit: contain;  
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 480px) {
+    .container {
+        max-width: 90%;
+        padding: 20px;
+    }
+
+    input {
+        font-size: 14px;
+    }
+
+    button {
+        font-size: 16px;
+    }
+
+    .qrbox {
+        width: 160px;
+        height: 160px;
+    }
+}
